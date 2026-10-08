@@ -1,0 +1,35 @@
+# Site da ABRAF — configuração para hospedagem Apache/cPanel
+
+# Abre index.html antes de qualquer index.php que tenha sobrado do site antigo
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Endereços do site antigo -> páginas novas (redirecionamento permanente)
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^historia\.php$ /quem-somos.html#historia [R=301,NE,L]
+RewriteRule ^objetivos\.php$ /quem-somos.html#objetivos [R=301,NE,L]
+RewriteRule ^estrutura\.php$ /quem-somos.html#estrutura [R=301,NE,L]
+RewriteRule ^diretoria\.php$ /quem-somos.html#diretoria [R=301,NE,L]
+RewriteRule ^associados\.php$ /quem-somos.html#associados [R=301,NE,L]
+RewriteRule ^eventos\.php$ /eventos.html [R=301,L]
+RewriteRule ^compliance\.php$ /compliance.html [R=301,L]
+RewriteRule ^oqueeformol\.php$ /formol.html#oquee [R=301,NE,L]
+RewriteRule ^fabricacao\.php$ /formol.html#fabricacao [R=301,NE,L]
+RewriteRule ^capacidadeInstalada\.php$ /formol.html#capacidade [R=301,NE,L]
+RewriteRule ^utilizacao\.php$ /formol.html#utilizacao [R=301,NE,L]
+RewriteRule ^presenca\.php$ /formol.html#presenca [R=301,NE,L]
+RewriteRule ^contatos\.php$ /contato.html [R=301,L]
+RewriteRule ^manual_compliance\.pdf$ /docs/manual-compliance-abraf.pdf [R=301,L]
+</IfModule>
+
+# Cache de imagens, CSS e JS por 30 dias
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
