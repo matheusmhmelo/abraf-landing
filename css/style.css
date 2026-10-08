@@ -1,0 +1,55 @@
+/* Estilos globais do site da ABRAF. A maior parte do visual está nos atributos style de cada página. */
+body{margin:0;background:#F3F5F7}
+a{color:#2F5673}a:hover{color:#213E54}
+.nl{color:#14212C;text-decoration:none}.nl:hover{color:#2F5673;text-decoration:underline;text-underline-offset:4px}
+.fl{color:#C7D2DC;text-decoration:none}.fl:hover{color:#FFFFFF}
+.btn-p:hover{background:#213E54 !important;color:#FFFFFF !important}
+.rail:hover{color:#2F5673 !important}
+.btn-a:hover{background:#6DB30A !important;color:#14212C !important}
+@media (prefers-reduced-motion: reduce){*{transition:none !important}}
+.burger{display:none}.mpanel{display:none}
+@media (max-width: 860px){.navlinks{display:none !important}.burger{display:flex !important}.mpanel{display:flex}}
+.mlink{color:#14212C;text-decoration:none}.mlink:hover{color:#2F5673}
+.chip:hover{border-color:#2F5673 !important;color:#2F5673 !important}
+.fld:focus{outline:2px solid #2F5673;outline-offset:1px;border-color:#2F5673 !important}
+
+/* ---- Estados controlados por js/site.js ---- */
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:96px}
+img{max-width:100%}
+.hp{position:absolute;left:-9999px}
+.burger .icon-close{display:none}
+.burger[aria-expanded="true"] .icon-open{display:none}
+.burger[aria-expanded="true"] .icon-close{display:block}
+.burger span{display:flex}
+/* Banner rotativo */
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.slide.is-active{opacity:1}
+.dot{width:10px;height:10px;padding:0;border:0;border-radius:999px;cursor:pointer;transition:width .3s;background:rgba(255,255,255,.55)}
+.dot.is-active{width:28px;background:#5A9A04}
+/* Seção "Conheça o formol" com scroll */
+.chapter{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(32px);pointer-events:none;transition:opacity .6s ease,transform .6s ease,visibility .6s}
+.chapter.is-before{transform:translateY(-32px)}
+.chapter.is-active{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.rail{font:inherit;font-size:14px;font-weight:600;text-align:left;background:none;border:0;cursor:pointer;padding:12px 16px;min-height:44px;margin-left:-2px;border-left:2px solid transparent;color:#4A5866}
+.rail.is-active{border-left-color:#2F5673;color:#2F5673}
+.story-bar{height:100%;width:25%;background:#2F5673;transition:width .3s ease}
+@media (max-width: 860px){
+.story{height:auto !important;padding:48px 0}
+.story-marker,.story-rail,.story-progress{display:none !important}
+.story-stage{position:static !important;height:auto !important;overflow:visible !important}
+.story-stage>div{height:auto !important}
+.story-chapters{height:auto !important;display:flex;flex-direction:column;gap:64px}
+.chapter{position:static;opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.chapter img,.chapter>div>div:first-child{height:260px !important;min-height:0 !important}
+.chapter>div>div[role="list"]{height:auto !important;padding:24px !important}
+[aria-label="Escolher destaque"]{top:8px;bottom:auto !important;right:8px !important;padding:6px 10px !important}
+}
+@media (max-width: 600px){
+.org-top{flex-wrap:nowrap !important}
+.org-top>div:nth-child(n+4){display:none}
+.org-top>div:nth-child(2){width:20px !important}
+.org-top>div:nth-child(odd){padding:12px 18px !important;font-size:18px !important}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
