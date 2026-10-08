@@ -18,7 +18,6 @@ Site institucional da **ABRAF — Associação Brasileira dos Produtores de Form
 | `js/site.js` | Menu do celular, banner rotativo, seção com scroll da home e envio do formulário |
 | `img/` | Imagens e logos |
 | `docs/manual-compliance-abraf.pdf` | Manual de Compliance |
-| `.htaccess` | Configuração para o cPanel (página inicial e redirecionamento dos endereços antigos) |
 
 O cabeçalho e o rodapé se repetem em todas as páginas. Se mudar um link do menu, mude nos 6 arquivos.
 
@@ -45,28 +44,17 @@ Os logos ficam em `img/associados/` em duas versões: escura (`nome.png`, para f
 ### Trocar o Manual de Compliance
 Substitua `docs/manual-compliance-abraf.pdf` mantendo o mesmo nome.
 
-## Publicação
+## Publicação (GitHub Pages, gratuito)
 
-### Opção principal: na hospedagem atual (cPanel)
-O domínio abraf.org.br e o e-mail já estão no cPanel, então o site é publicado lá mesmo, sem mexer em DNS.
+1. No GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, branch `main`, pasta `/ (root)`.
+2. Em alguns minutos o site fica no ar em `https://<usuario>.github.io/<repositorio>/`.
+3. Toda alteração enviada para a `main` é publicada automaticamente.
 
-1. Baixe este repositório como ZIP (botão **Code → Download ZIP** no GitHub).
-2. No cPanel, abra o **Gerenciador de Arquivos** e entre em `public_html`.
-3. **Teste primeiro:** crie a pasta `public_html/novo`, envie o ZIP para dentro dela e use **Extrair**. Confira o site em `https://abraf.org.br/novo/`.
-4. **Troca definitiva:**
-   - crie `public_html/antigo` e mova para lá **todos** os arquivos do site antigo (`*.php`, `img`, `css`, `.htaccess` antigo etc.) — exceto pastas do sistema como `cgi-bin` e `.well-known`;
-   - mova o conteúdo de `public_html/novo` para `public_html` (inclusive o arquivo oculto `.htaccess`; ative "Mostrar arquivos ocultos" nas configurações do Gerenciador).
-5. Abra `https://abraf.org.br` e teste também um endereço antigo, como `https://abraf.org.br/historia.php` (deve redirecionar para a página nova).
-6. Depois de alguns dias sem problemas, a pasta `antigo` pode ser apagada (ou mantida como backup).
-
-O e-mail não é afetado: nada muda no DNS.
-
-Para atualizar o site no futuro: edite os arquivos (no GitHub ou no seu computador) e envie os arquivos alterados para `public_html` pelo Gerenciador de Arquivos.
-
-O `.htaccess` deste repositório faz o servidor abrir `index.html` em vez de `index.php` e redireciona os endereços do site antigo (`historia.php`, `eventos.php`, `manual_compliance.pdf`…) para as páginas novas, preservando links já compartilhados e o Google.
-
-### Alternativa: GitHub Pages
-Também funciona no GitHub Pages (Settings → Pages → branch `main`, pasta raiz), mas usar o domínio abraf.org.br exige mudar o DNS. Como hoje o e-mail (MX) aponta para o próprio domínio, antes seria preciso criar `mail.abraf.org.br` como registro A do servidor do cPanel e apontar o MX para ele. Prefira a opção do cPanel enquanto o e-mail estiver lá.
+### Usar o domínio abraf.org.br
+1. Em **Settings → Pages → Custom domain**, informe `abraf.org.br` (o GitHub cria o arquivo `CNAME`).
+2. No painel do domínio (Registro.br), aponte o domínio para o GitHub Pages conforme a [documentação oficial](https://docs.github.com/pt/pages/configuring-a-custom-domain-for-your-github-pages-site).
+3. **Atenção ao e-mail:** se o abraf@abraf.org.br estiver hospedado no cPanel atual, mantenha os registros **MX** (e SPF/DKIM) existentes ao mexer no DNS. Altere apenas os registros do site (A/AAAA do domínio e CNAME do `www`). Do contrário o e-mail para de funcionar.
+4. Depois de propagar, marque **Enforce HTTPS**.
 
 ## Pendências de conteúdo
 
