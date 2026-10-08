@@ -216,5 +216,34 @@
 </footer>
 
 </div>
+<!-- Modal do evento. Aparece uma vez por visitante (lembrado no navegador) e some sozinho depois da data em data-ate.
+     Para desativar antes, apague este bloco inteiro (do comentário até o fim do div#evento-modal). -->
+<div id="evento-modal" class="modal-backdrop" data-ate="2026-11-23" data-chave="abraf-summit-2026" hidden>
+<div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="evento-modal-titulo" style="position: relative; width: 760px; max-width: 100%; background: #FFFFFF; border-radius: 24px; overflow: hidden; display: grid; box-shadow: 0 24px 64px rgba(20, 33, 44, 0.35)">
+<div class="modal-side" style="background: #2F5673; color: #FFFFFF; padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #C5D6E3">PRÓXIMO EVENTO</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span class="modal-dia" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 96px; line-height: 0.9">23</span>
+<span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 16px; letter-spacing: 0.14em">NOV · 2026</span>
+</div>
+<span style="font-size: 15px; color: #DCE6EE">9h às 15h<br>Pullman Hotel<br>Guarulhos/SP</span>
+</div>
+<div style="padding: 36px 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<button class="modal-fechar" type="button" aria-label="Fechar" data-modal-fechar style="position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; border: 0; border-radius: 999px; background: #FFFFFF; color: #14212C; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
+<span style="align-self: flex-start; background: #14212C; color: #FFFFFF; border-radius: 999px; padding: 4px 12px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em">VAGAS LIMITADAS</span>
+<h2 id="evento-modal-titulo" style="margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 40px; line-height: 1.05">Summit ABRAF 2026</h2>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; background: #F3F5F7; border-radius: 14px">
+<span style="font-size: 14px; font-weight: 600; color: #2F5673">Condições especiais até 19/10/2026</span>
+<span style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A9A04" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg><span>Individual: <strong>R$ 900,00</strong></span></span>
+<span style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A9A04" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg><span>Pacote acima de 5 pessoas: <strong>R$ 850,00</strong> por pessoa</span></span>
+</div>
+<span style="font-size: 14px; color: #4A5866">Inclui participação no evento, <em>welcome coffee</em>, <em>coffee break</em> e almoço.</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding-top: 4px">
+<a class="btn-a" href="https://forms.gle/AHjPye6nQssvR9hz8" target="_blank" rel="noopener" data-modal-fechar style="background: #5A9A04; color: #14212C; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 999px">Fazer inscrição</a>
+<a href="eventos.html" data-modal-fechar style="font-weight: 600">Ver detalhes</a>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

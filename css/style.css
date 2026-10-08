@@ -53,3 +53,15 @@ img{max-width:100%}
 .org-top>div:nth-child(odd){padding:12px 18px !important;font-size:18px !important}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+/* Modal do evento (página inicial) */
+.modal-backdrop{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;color:#14212C;position:fixed;inset:0;z-index:100;background:rgba(20,33,44,.62);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
+.modal-card{grid-template-columns:260px 1fr;max-height:calc(100vh - 32px);overflow-y:auto}
+.modal-fechar:hover{background:#E6EBF0 !important}
+@media (max-width: 640px){
+.modal-card{grid-template-columns:1fr}
+.modal-side{flex-direction:row !important;flex-wrap:wrap;align-items:center;padding:20px 24px !important;gap:8px 20px !important}
+.modal-side>span:first-child{width:100%}
+.modal-dia{font-size:56px !important}
+.modal-fechar{background:transparent !important;color:#FFFFFF !important}
+}

@@ -95,4 +95,39 @@
     var again = success.querySelector('[data-contact-reset]');
     if (again) again.addEventListener('click', function () { success.hidden = true; form.hidden = false; });
   }
+
+  /* ---------- Modal do evento (página inicial) ---------- */
+  var modal = document.getElementById('evento-modal');
+  if (modal) {
+    var chave = modal.dataset.chave || 'abraf-modal';
+    var ate = modal.dataset.ate ? new Date(modal.dataset.ate + 'T23:59:59-03:00') : null;
+    var visto = false;
+    try { visto = localStorage.getItem(chave) === 'visto'; } catch (e) {}
+    var anterior = null;
+    var fechar = function () {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      try { localStorage.setItem(chave, 'visto'); } catch (e) {}
+      if (anterior && anterior.focus) anterior.focus();
+    };
+    var abrir = function () {
+      anterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      var b = modal.querySelector('.modal-fechar'); if (b) b.focus();
+    };
+    modal.querySelectorAll('[data-modal-fechar]').forEach(function (el) { el.addEventListener('click', fechar); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) fechar(); });
+    document.addEventListener('keydown', function (e) {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') { fechar(); return; }
+      if (e.key === 'Tab') { // mantém o foco dentro do modal
+        var f = modal.querySelectorAll('a[href], button');
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    if (!visto && (!ate || new Date() <= ate)) setTimeout(abrir, 800);
+  }
 })();

@@ -28,6 +28,11 @@ O cabeçalho e o rodapé se repetem em todas as páginas. Se mudar um link do me
 2. Na página inicial (`index.html`), atualize a faixa azul "Próximo evento" (título, dia, mês, horário e local).
 3. Troque o link de inscrição: procure por `forms.gle` em `eventos.html` (aparece 2 vezes) e coloque o link do novo Google Forms.
 
+### Modal do evento na página inicial
+O `index.html` tem, no final, um bloco `div#evento-modal` com o anúncio do Summit. Ele aparece uma vez por visitante (o navegador lembra que já foi visto) e deixa de aparecer sozinho depois da data em `data-ate`.
+- Para um novo evento: troque os textos e o link, mude `data-ate` para a data do evento e `data-chave` para um nome novo (ex.: `abraf-summit-2027`), assim quem já fechou o anúncio antigo vê o novo.
+- Para remover: apague o bloco inteiro (está marcado com um comentário).
+
 ### Configurar o formulário de contato (uma vez só)
 O formulário usa o [Web3Forms](https://web3forms.com), gratuito e sem servidor.
 1. Acesse https://web3forms.com, informe o e-mail **abraf@abraf.org.br** e copie a "Access Key" recebida.
