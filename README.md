@@ -60,7 +60,6 @@ Substitua `docs/manual-compliance-abraf.pdf` mantendo o mesmo nome.
 
 - [ ] Data, programação e link de inscrição do próximo evento (hoje mostra o evento de 21/11/2024).
 - [ ] Chave do Web3Forms no formulário de contato.
-- [ ] Confirmar a diretoria atual: a imagem do site antigo lista Adroaldo R. C. Carvalho (GPC Química) como presidente, mas a "Palavra do Presidente" é assinada por Leonardo A. G. Donoso.
 - [ ] Texto do card "Mercado petrolífero" em `formol.html` (no site antigo ele repetia o texto de Fundição).
 - [ ] Unidade e ano mais recente da capacidade instalada (gráfico em `formol.html`).
 
