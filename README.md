@@ -44,7 +44,7 @@ As mensagens passam a chegar nesse e-mail.
 Em `quem-somos.html`, procure a seção `id="diretoria"`. Cada pessoa é um bloco `<article>` com logo da empresa, cargo, nome e empresa.
 
 ### Trocar ou adicionar associados
-Os logos ficam em `img/associados/` em duas versões: escura (`nome.png`, para fundo claro) e clara (`nome-branco.png`, para fundo escuro). Eles aparecem em `quem-somos.html` (seção `id="associados"`) e na página inicial (parte "04 / 04 · Associados").
+Os logos ficam em `img/associados/` (`nome.png`), nas cores originais de cada empresa e com fundo transparente. Na seção escura de `quem-somos.html` (`id="associados"`) eles aparecem sobre cartões brancos; também são usados na página inicial (parte "04 / 04 · Associados") e nos cartões da Diretoria. Para trocar um logo, substitua o arquivo mantendo o nome (de preferência PNG transparente ou SVG).
 
 ### Trocar o Manual de Compliance
 Substitua `docs/manual-compliance-abraf.pdf` mantendo o mesmo nome.
