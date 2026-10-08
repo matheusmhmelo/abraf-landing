@@ -26,7 +26,7 @@ O cabeçalho e o rodapé se repetem em todas as páginas. Se mudar um link do me
 ### Atualizar o evento
 1. Em `eventos.html`, troque o título, a data, o horário, o local, o valor e a programação.
 2. Na página inicial (`index.html`), atualize a faixa azul "Próximo evento" (título, dia, mês, horário e local).
-3. Troque o link de inscrição: procure por `href="#inscricao"` em `eventos.html` (aparece 2 vezes) e coloque o link do Google Forms.
+3. Troque o link de inscrição: procure por `forms.gle` em `eventos.html` (aparece 2 vezes) e coloque o link do novo Google Forms.
 
 ### Configurar o formulário de contato (uma vez só)
 O formulário usa o [Web3Forms](https://web3forms.com), gratuito e sem servidor.
@@ -58,7 +58,7 @@ Substitua `docs/manual-compliance-abraf.pdf` mantendo o mesmo nome.
 
 ## Pendências de conteúdo
 
-- [ ] Data, programação e link de inscrição do próximo evento (hoje mostra o evento de 21/11/2024).
+- [ ] Programação do Summit ABRAF 2026, quando estiver definida.
 - [ ] Chave do Web3Forms no formulário de contato.
 - [ ] Texto do card "Mercado petrolífero" em `formol.html` (no site antigo ele repetia o texto de Fundição).
 - [ ] Unidade e ano mais recente da capacidade instalada (gráfico em `formol.html`).
